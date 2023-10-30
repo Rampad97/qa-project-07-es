@@ -36,23 +36,23 @@ def retrieve_phone_code(driver) -> str:
 class UrbanRoutesPage:
     from_field = (By.ID, 'from')
     to_field = (By.ID, 'to')
-    taxi_button = (By.XPATH, data.taxi)
-    comfort_button = (By.XPATH, data.comfort)
+    taxi_button = (By.XPATH, '//*[@id="root"]/div/div[3]/div[3]/div[1]/div[3]/div[1]/button')
+    comfort_button = (By.XPATH, '/html/body/div/div/div[3]/div[3]/div[2]/div[1]/div[5]')
     phone_button = (By.CLASS_NAME, 'np-button')
     phone_field = (By.ID, 'phone')
-    next_button = (By.XPATH, data.next)
+    next_button = (By.XPATH, '/html/body/div/div/div[1]/div[2]/div[1]/form/div[2]/button')
     phone_code = (By.ID, 'code')
-    confirm_button = (By.XPATH, data.confirm_code)
+    confirm_button = (By.XPATH, '/html/body/div/div/div[1]/div[2]/div[2]/form/div[2]/button[1]')
     payment_button = (By.CSS_SELECTOR, '.pp-button.filled')
     add_card_button = (By.CSS_SELECTOR, '.pp-row.disabled')
     number_card_field = (By.ID, 'number')
-    code_card_field = (By.XPATH, data.payment_code)
-    link_button = (By.XPATH, data.link_card)
-    close_window_button = (By.XPATH, data.close_payment)
+    code_card_field = (By.XPATH, '/html/body/div/div/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[2]/div[2]/input')
+    link_button = (By.XPATH, '/html/body/div/div/div[2]/div[2]/div[2]/form/div[3]/button[1]')
+    close_window_button = (By.XPATH, '/html/body/div/div/div[2]/div[2]/div[1]/button')
     comment_field = (By.ID, 'comment')
     slide_button = (By.CLASS_NAME, 'slider.round')
-    ice_cream = (By.XPATH, data.counter_plus)
-    order_taxi_button = (By.CSS_SELECTOR, '.smart-button')
+    ice_cream = (By.XPATH, '/html/body/div/div/div[3]/div[3]/div[2]/div[2]/div[4]/div[2]/div[3]/div/div[2]/div[1]/div/div[2]/div/div[3]')
+    call_taxi_button = (By.CSS_SELECTOR, '.smart-button')
     modal_element = (By.CSS_SELECTOR, '.order-header-content')
 
     def __init__(self, driver):
@@ -117,7 +117,7 @@ class UrbanRoutesPage:
 
     #Click en el botón para ordenar el taxi
     def click_order_taxi_button(self):
-        self.driver.find_element(*self.order_taxi_button).click()
+        self.driver.find_element(*self.call_taxi_button).click()
 
     #Esperar a que aparezca la información del conductor en el modal
     def wait_for_load_information(self):
