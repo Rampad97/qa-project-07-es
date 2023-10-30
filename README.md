@@ -10,18 +10,23 @@
 ## Archivos
   El proyecto cuenta con dos archivos:
   - **data.py:**
-      Contiene información para llenar algunos campos y los localizadores que se utilizan para identificar algunos elementos en la interfaz de la aplicación.
+      Contiene información, variables constantes para llenar algunos campos.
     
-  - **main.py:**
-      Se describen los métodos para interactuar con los elementos de la interfaz de la página de Urban Routes para realizar y se definen las pruebas para verificar que las acciones se ralicen correctamente.
+  - **main.py:** los localizadores que se utilizan para  en la interfaz de la aplicación.
+      Se describen los localizadores los métodos para identificar e interactuar con los elementos de la interfaz de la página de Urban Routes para realizar y se definen las pruebas para verificar que las acciones se ralicen correctamente.
+
+## Ejecutar las pruebas
+  - Descargar los archivos en una carpeta zip.
+  - Ejecutar las pruebas en PyCharm.
+    - Instalar los paquetes de selenium y pytest 
 
 ## Pruebas que se deben comprobar
   Las pruebas automatizadas que se deben comprobar para realizar el proceso completo de pedir un taxi:
-  1. **Configurar la dirección:** 
-  2. **Seleccionar la tarifa Comfort:**
-  3. **Rellenar el número de teléfono:**
-  4. **Agregar una tarjeta de crédito:**
-  5. **Escribir un mensaje para el controlador:**
-  6. **Pedir una manta y pañuelos:**
-  7. **Pedir 2 helados.:**
-  8. **Aparece el modal para buscar un taxi:**
+  1. Configurar la dirección 
+  2. Seleccionar la tarifa Comfort
+  3. Rellenar el número de teléfono
+  4. Agregar una tarjeta de crédito
+  5. Escribir un mensaje para el controlador
+  6. Pedir una manta y pañuelos
+  7. Pedir 2 helados
+  8. Aparece el modal para buscar un taxi
